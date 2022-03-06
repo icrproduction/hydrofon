@@ -9,7 +9,7 @@
     <header class="w-full py-12 px-0 bg-red-600">
         <h1 class="m-0 font-bold text-base leading-none uppercase">
             <a href="{{ url('/') }}" class="block text-white hover:text-white">
-                {{ config('app.name', 'Hydrofon') }}
+            ICR Production Equipment
             </a>
         </h1>
     </header>

@@ -5,7 +5,7 @@
         <header class="flex w-1/2 h-screen flex-grow items-center justify-center">
             <div>
                 <h1 class="font-bold uppercase">
-                    {{ config('app.name', 'Hydrofon') }}
+                ICR Production Equipment
                 </h1>
 
                 <x-forms.button
@@ -22,7 +22,7 @@
         <div
             class="w-1/2 h-screen bg-cover"
             style="
-                background-image: url('{{ asset('images/unsplash.jpg') }}');
+                background-image: url('{{ asset('images/unsplash2.jpg') }}');
                 background-position: 55% center;
                 -webkit-clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0% 100%);
                 clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0% 100%);
