@@ -33,7 +33,7 @@ class Segel extends Component
     public function mount($resources, $date)
     {
         $this->resources = $resources;
-        $this->setGrid($date, 'day');
+        $this->setGrid($date, 'month');
     }
 
     public function render()

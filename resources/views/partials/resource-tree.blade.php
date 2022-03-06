@@ -5,7 +5,7 @@
         visible: false,
         expanded: @json($expanded),
         selected: @json($selected),
-        date: '{{ isset($date) ? $date->format('Y-m-d') : now()->format('Y-m-d') }}'
+        date: '{{ isset($date) ? $date->format('Y-m-d') : date('Y-m-01') }}'
     })"
 
     x-on:show-resourcelist.window="visible = true"
@@ -29,7 +29,7 @@
             <x-forms.input
                 id="resourcelist-date"
                 name="date"
-                value="{{ isset($date) ? $date->format('Y-m-d') : now()->format('Y-m-d') }}"
+                value="{{ isset($date) ? $date->format('Y-m-d') : date('Y-m-01') }}"
                 x-ref="datepicker"
                 x-bind:value="date"
             />

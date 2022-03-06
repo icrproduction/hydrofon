@@ -59,7 +59,7 @@ class CalendarController extends Controller
     {
         return $date != null
             ? Carbon::parse($date)
-            : now();
+            : Carbon::createFromFormat('Y-m-d', date('Y-m-01'));
     }
 
     /**

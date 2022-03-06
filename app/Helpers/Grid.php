@@ -26,7 +26,7 @@ class Grid
     {
         $this->type = in_array($type, [self::TYPE_DAY, self::TYPE_WEEK, self::TYPE_MONTH])
             ? $type
-            : self::TYPE_DAY;
+            : self::TYPE_MONTH;
 
         $date = $date->startOfDay();
 

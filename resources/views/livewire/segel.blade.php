@@ -32,7 +32,7 @@
                 <x-forms.select
                     name="type"
                     id="type"
-                    :options="['day' => 'Day', 'week' => 'Week', 'month' => 'Month']"
+                    :options="['month' => 'Month', 'week' => 'Week', 'day' => 'Day']"
                     wire:model="type"
                     class="ml-1"
                 />
@@ -104,7 +104,7 @@
                             <ul class="segel-bookings absolute inset-0 select-none">
                                 @foreach($resource->bookings as $booking)
                                     <li
-                                        class="segel-booking block h-full absolute inset-y-0 z-40 overflow-hidden bg-red-600 opacity-75 rounded @can('update', $booking) editable @endcan"
+                                        class="segel-booking block text-white flex items-center pl-2 h-full absolute inset-y-0 z-40 overflow-hidden bg-red-600 opacity-75 rounded @can('update', $booking) editable @endcan"
                                         title="{{ $booking->user->name }}"
                                         style="
                                             width: {{ $booking->duration / $this->timestamps['duration'] * 100 }}%;
@@ -115,6 +115,7 @@
                                         data-start="{{ $booking->start_time->format('U') }}"
                                         data-end="{{ $booking->end_time->format('U') }}"
                                     >
+                                        {{ $booking->user->name }}
                                         <span class="segel-resize-handle segel-resize-handle__left hidden items-center w-2 h-full absolute inset-y-0 bg-red-900 opacity-50 text-white text-center">&#8942;</span>
                                         <span class="segel-resize-handle segel-resize-handle__right hidden items-center w-2 h-full absolute inset-y-0 bg-red-900 opacity-50 text-white text-center">&#8942;</span>
                                     </li>
